@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Development
+metadata:
+  name: earscope-dev
+spec:
+  replicas: 2 # override to dev after base 1 replicas
+
+# label "environment: development" to Development
+metadata:
+  labels:
+    environment: development

@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: earscope
+spec:
+  replicas: 3 # override to prod after base 2 replicas
+
+# label "environment: production" to Deployment
+metadata:
+  labels:
+    environment: production
