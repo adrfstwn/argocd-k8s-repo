@@ -1,19 +1,19 @@
 apiVersion: apps/v1
-kind: Development
+kind: Deployment
 metadata:
-  name: earscope-dev
+  name: earscope
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: earscope-dev
+      app: earscope
   template:
     metadata:
       labels:
-        app: earscope-dev
+        app: earscope
     spec:
       containers:
-      - name: earscope-dev
+      - name: earscope
         image: earscope:latest
         ports:
-        - containerPort: 8090
+        - containerPort: 8092

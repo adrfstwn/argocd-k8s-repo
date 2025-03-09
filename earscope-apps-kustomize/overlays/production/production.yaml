@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: earscope
+  name: earscope-prod
 spec:
   replicas: 3 # override to prod after base 2 replicas
 

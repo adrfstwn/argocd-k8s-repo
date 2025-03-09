@@ -1,5 +1,0 @@
-resources:
-  - ../../base # path to config base template
-
-patches:
-  - path: development_patch.yaml # path to config patch template to modificate base config
