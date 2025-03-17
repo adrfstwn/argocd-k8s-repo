@@ -1,12 +1,12 @@
-apiVersion: 1
+apiVersion: v1
 kind: Service
 metadata:
-  name: earscope
+  name: earscope-model-service
 spec:
   selector:
-    app: earscope
+    app: earscope-model
   ports:
-    - protocol: TCP 
-      port: 8090
-      targetPort: 8090
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
   type: ClusterIP

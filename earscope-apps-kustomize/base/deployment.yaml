@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: earscope
+  name: earscope-model
+  labels:
+    app: earscope-model
 spec:
-  replicas: 1
   selector:
     matchLabels:
-      app: earscope
+      app: earscope-model
   template:
     metadata:
       labels:
-        app: earscope
+        app: earscope-model
     spec:
       containers:
-      - name: earscope
-        image: earscope:latest
-        ports:
-        - containerPort: 8092
+        - name: earscope-model
+          image: 103.155.246.50/earscope-model:latest
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: IfNotPresent

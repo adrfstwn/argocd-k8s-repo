@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: earscope-prod
+  name: earscope-model
 spec:
-  replicas: 3 # override to prod after base 2 replicas
-
-# label "environment: production" to Deployment
-metadata:
-  labels:
-    environment: production
+  replicas: 2 # override to prod after base 2 replicas
+  template:
+    spec:
+      containers:
+        - name: earscope-model
+          image: 103.155.246.50/earscope-model:prod
