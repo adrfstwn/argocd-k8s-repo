@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: earscope-model
 spec:
-  replicas: 1 # override to dev after base 1 replicas
+  replicas: 1
   template:
     spec:
       containers:
