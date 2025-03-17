@@ -4,7 +4,13 @@ metadata:
   name: earscope-model
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: earscope-model
   template:
+    metadata:
+      labels:
+        app: earscope-model
     spec:
       containers:
         - name: earscope-model
