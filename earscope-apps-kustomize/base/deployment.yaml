@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: earscope-model
-          image: 103.155.246.50/earscope-model:latest
+          image: adrfstwn/earscope-model:latest
           ports:
             - containerPort: 5000
           imagePullPolicy: IfNotPresent

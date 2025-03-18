@@ -8,4 +8,4 @@ spec:
     spec:
       containers:
         - name: earscope-model
-          image: 103.155.246.50/earscope-model:prod
+          image: adrfstwn/earscope-model:latest
