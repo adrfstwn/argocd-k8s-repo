@@ -32,3 +32,8 @@ spec:
               secretKeyRef:
                 name: earscope-secret
                 key: DATABASE_URL
+          - name: API_SEND_VIDEO_URL
+            valueFrom:
+              secretKeyRef:
+                name: earscope-secret
+                key: API_SEND_VIDEO_URL
