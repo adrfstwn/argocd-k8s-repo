@@ -15,6 +15,7 @@ spec:
       containers:
         - name: earscope-model
           image: adrfstwn/earscope-model:latest # 1742675401
+          imagePullPolicy: Always
           env:
           - name: FLASK_APP
             value: "run.py"
