@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: earscopeweb-backend
+  labels:
+    app: earscopeweb-backend
+spec:
+  selector:
+    matchLabels:
+      app: earscopeweb-backend
+  template:
+    metadata:
+      labels:
+        app: earscopeweb-backend
+    spec:
+      containers:
+        - name: earscopeweb-backend
+          image: adrfstwn/earscopeweb-backend:latest
+          ports:
+            - containerPort: 8081
+          imagePullPolicy: IfNotPresent

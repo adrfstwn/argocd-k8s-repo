@@ -1,0 +1,8 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+namespace: earscopeweb
+kind: Kustomization
+resources:
+  - ../../base/backend
+
+patchesStrategicMerge:
+  - development-backend.yaml
