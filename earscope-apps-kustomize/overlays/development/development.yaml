@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: earscope-model
-          image: adrfstwn/earscope-model:latest # 1742828814
+          image: adrfstwn/earscope-model:latest # 17428288146
           imagePullPolicy: Always
           env:
           - name: FLASK_APP
