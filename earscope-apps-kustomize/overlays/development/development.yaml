@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: earscope-model
+  annotations:
+    argocd.argoproj.io/sync-options: Prune=false,Replace=true
 spec:
   replicas: 2
   selector:
@@ -14,7 +16,7 @@ spec:
     spec:
       containers:
         - name: earscope-model
-          image: adrfstwn/earscope-model:latest # 1742675401
+          image: adrfstwn/earscope-model:latest-1742832391 # 1742832710
           imagePullPolicy: Always
           env:
           - name: FLASK_APP
