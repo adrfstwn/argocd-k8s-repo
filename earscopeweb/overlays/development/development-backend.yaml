@@ -15,25 +15,7 @@ spec:
       containers:
         - name: earscopeweb-backend
           image: adrfstwn/earscopeweb-backend:latest
-          # env:
-          # - name: FLASK_APP
-          #   value: "run.py"
-          # - name: FLASK_DEBUG
-          #   value: "1"
-          # - name: FLASK_ENV
-          #   value: "development"
-          # - name: APP_KEY
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: earscope-secret
-          #       key: APP_KEY
-          # - name: DATABASE_URL
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: earscope-secret
-          #       key: DATABASE_URL
-          # - name: API_SEND_VIDEO_URL
-          #   valueFrom:
-          #     secretKeyRef:
-          #       name: earscope-secret
-          #       key: API_SEND_VIDEO_URL
+          envFrom:
+            - secretRef:
+                name: earscopeweb-backend-secret
+
