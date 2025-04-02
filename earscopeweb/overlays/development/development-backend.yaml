@@ -15,7 +15,19 @@ spec:
       containers:
         - name: earscopeweb-backend
           image: adrfstwn/earscopeweb-backend:latest
-          envFrom:
-            - secretRef:
-                name: earscopeweb-backend-secret
+          volumeMounts:
+            - name: earscopeweb-backend-volume
+              mountPath: /app/.env
+              subPath: .env
+      volumes:
+        - name: earscopeweb-backend-volume
+          secret:
+            secretName: earscopeweb-backend-secret
+            items:
+              - key: earscopeweb-backend-secret
+                path: .env
+            
+          # envFrom:
+          #   - secretRef:
+          #       name: earscopeweb-backend-secret
 
